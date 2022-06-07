@@ -1,0 +1,29 @@
+#route:
+        #  receiver: 'slack'
+
+  #receivers:
+  #  - name: 'slack'
+#       slack_configs:
+#           - send_resolved: true
+#             username: '<username>'
+#             channel: '#<channel-name>'
+#             api_url: '<incomming-webhook-url>'
+
+route:
+  group_by: ['Alertname']
+  receiver: 'email-notification'
+  repeat_interval: 1h
+
+receivers:
+- name: 'email-notification'
+  email_configs:
+#  - to: <receiver email ids>
+#    from: <sender email id>
+#    smarthost: <stmp server details>
+#    auth_username: <email address>
+#    auth_identity: <email address>
+#    auth_password: <password>
+#    require_tls: false
+#    tls_config:
+#      insecure_skip_verify: true
+             
